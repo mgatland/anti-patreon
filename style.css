@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
 :root {
   --mainActionColor: #3a3b58;
 }
 
 body {
 	margin: 0;
+	font-family: 'Roboto', sans-serif;
 }
 
 /* non-scrolling header */
@@ -14,8 +17,11 @@ header {
 	z-index: 100;
 	top: 0px;
 	padding: 16px;
-	border-bottom: 1px solid lightgrey;
 	background-color: white;
+}
+
+.hasBottomEdge {
+	border-bottom: 1px solid lightgrey;
 }
 
 .wordmark {
@@ -53,7 +59,6 @@ main {
 
 
 .bannerLine {
-	width: 100%;
 	display: flex;
 	align-items: center;
 }
@@ -62,6 +67,7 @@ main {
 	color: white;
 	text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
 	font-size: 32px;
+	font-weight: 700;
 }
 
 .avatar {
@@ -87,6 +93,7 @@ main {
 }
 
 .mainAction {
+	box-sizing: border-box;
 	display: inline-block;
 	background-color: var(--mainActionColor);
 	color: white;
@@ -94,7 +101,9 @@ main {
 	border-radius: 32px;
 	padding: 0 32px;
 	text-decoration: none;
-	margin: 12px;
+	margin: 12px 8px;
+	width: calc(25% - 16px); /* match right column width */
+	text-align: center;
 }
 
 /*content grid*/
@@ -105,32 +114,45 @@ main {
 .narrow {
 	width: 100%;
 	max-width: 1152px;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .contentGrid {
 	display: grid;
 	grid-template-columns: 25% 50% 25%;
 	grid-template-areas: "left main right";
+	margin-top: 8px; /* maybe a hack */
 }
 
 .leftBar {
 	grid-area: left;
+	/* flex used here purely to prevent margin collapse */
+	display: flex;
+  flex-direction: column;
 }
 
 .rightBar {
 	grid-area: right;
+	/* flex used here purely to prevent margin collapse */
+	display: flex;
+  flex-direction: column;
 }
 
 .mainContent {
 	grid-area: main;
+	/* flex used here purely to prevent margin collapse */
+	display: flex;
+  flex-direction: column;
 }
 
 .box {
   border: 1px solid lightgrey;
   border-radius: 4px;
-  margin: 8px;
-  padding: 16px;
+	margin: 8px;
+	margin-top: 10px;
+	margin-bottom: 9px;
+	padding: 16px;
 }
 
 .boxSection {
@@ -141,14 +163,31 @@ main {
 }
 
 /* number of patrons */
-h6 {
-  font-size: 32px;
-  margin: 0;
+.bigNumber {
+	font-size: 28px;
+	font-weight: bold;
+	margin: 0;
+	margin-top: 12px;
+	margin-bottom: 6px;
+}
+
+.smol {
+	color: grey;
+	font-size: 14px;
+	font-weight: normal; /* override if in bold heading */
 }
 
 /* box headings, always in a boxSection */
 h5 {
 	margin: 0;
+	font-weight: 700;
+}
+
+/* backer tiers */
+h6 {
+	font-size: 16px;
+	margin-bottom: 4px;
+	margin-top: 20px;
 }
 
 p {
@@ -159,4 +198,68 @@ p {
 
 .hidden {
 	display: none;
+}
+
+.smallButton {
+	box-sizing: border-box;
+	display: block;
+	background-color: #5b9ba3;
+	color: white;
+	line-height: 32px;
+	border-radius: 16px;
+	padding: 0 12px;
+	text-decoration: none;
+	margin: 12px 0;
+	text-align: center;
+}
+
+.smallButton img {
+	height: 12px;
+	margin-right: 10px;
+}
+
+.wide {
+	display: block;
+}
+
+.half {
+	width: 50%;
+}
+.half:not(:first-child) {
+	margin-left: 16px;	
+}
+
+.progressFilled {
+	width: 70%;
+	background-color: orange;
+	height: 8px;
+	border-radius: 4px;
+}
+
+.progress {
+	width: 100%;
+	background-color: grey;
+	height: 8px;
+	border-radius: 4px;
+	margin-top: 10px;
+	margin-bottom: 16px;
+}
+
+.twitterButton {
+	background-color: #1da1f2;
+}
+
+.smallButton.twitterButton img {
+	height: 21px;
+	vertical-align: sub;
+	margin-left: 0px;
+	margin-right: 6px;
+}
+
+.facebookButton {
+	background-color: #4167b1;
+}
+
+.across {
+	display: flex;
 }

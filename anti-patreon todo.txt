@@ -1,0 +1,14 @@
+to do:
+
+[x] facebook and twitter share buttons
+[x] progress bar
+[ ] page between the goals
+
+[ ] mobile friendly mode
+
+[ ] polish the main content
+
+[ ] the sign-up page and flow
+
+[ ] dynamic patreon count? including goal progress?
+

@@ -6,29 +6,31 @@
   	<!-- todo: meta stuff, tracking stuff -->
   </head>
   <body>
-  	<header>
+  	<header class="hasBottomEdge">
   		<div class="wordmark">ANTI-PATREON </div>
   	</header>
   	<div class="navigationOffset"></div>
   	<main>
   		<div class="banner">
-  			<div class="bannerLine">
+  			<div class="bannerLine narrow">
   				<div class="avatar"></div>
-  				<span class="bannerText">Matthew Gatland is making tiny&nbsp;games</span>
+  				<span class="bannerText">Matthew Gatland stopped making tiny&nbsp;games</span>
   			</div>
-  		</div>
-			<div class="narrow">
-				<div class="menuBar">
-					<!-- tabs: overview, posts-->
-					<a class="mainAction" href="#">Become an anti-patron</a>
-				</div>
-			</div>
+		  </div>
+		  <div class="hasBottomEdge">
+				<div class="narrow">
+					<div class="menuBar">
+						<!-- tabs: overview, posts-->
+						<a class="mainAction" href="#">Become an anti-patron</a>
+					</div>
+        </div>
+		  </div>
 			<div class="narrow">
 				<div class="contentGrid">
 					<div class="mainContent">
 						<div class="box">
-							<h4>When I miss a deadline, you get paid</h4>
-							<p>I'm Matthew Gatland and I used to make <a href="">tiny</a> <a href="">games</a> <a href="">all</a> <a href="">the</a> <a href="">time</a>. But then something went wrong. I got tired - or lazy - or caught up in the other parts of life. I don't know what happened. All I know is this: for the first time since I was a child, I went 12 months without releasing a game.</p><br>
+							<h4>If I miss another deadline, you get paid</h4>
+							<p>I'm Matthew Gatland and I used to make <a href="">tiny</a> <a href="">games</a> <a href="">all</a> <a href="">the</a> <a href="">time</a>. But then something went wrong. I got tired - or lazy - or caught up in the other parts of life. I don't know what happened. All I know is this: for the first time in my adult life, I went 12 months without releasing a game.</p><br>
 							<p>You can help! I don't need your money. I just need pressure. I need a reason to get the job done, some reason I can't just put it off forever.</p>
 							<p>So here's the deal: from now on, every month, I <i>will</i> release a game. But if I don't, I'll pay each of my anti-patrons $5 New Zealand dollars.</p>
 							<p>If I miss the deadline, I have to pay up.</p><br>
@@ -42,22 +44,32 @@
 					</div>
 					<div class="leftBar">
 						<div class="box">
-							<h6>0</h6>
-							<p>anti-patrons</p>
-							<h6>-$0</h6>
-							<p>per deadline missed</p>
+							<div class="bigNumber">0</div>
+							<p class="smol">anti-patrons</p>
+							<div class="bigNumber">-$0</div>
+							<p class="smol">per missed deadline</p>
 						</div>
-						<div class="box">
-							facebook share, twitter share
+						<div class="box across">
+              <a href="#" class="smallButton facebookButton half">
+                <img src="facebook.png">
+                Share
+              </a>
+              <a href="#" class="smallButton twitterButton half">
+                <img src="twitter2.png">
+                Tweet
+              </a>
 						</div>
 						<div class="box">
 							<div class="boxSection">
 								<h5>GOALS</h5>
 							</div>
 							<div class="page1">
-								<p>-$0 of -$30 per month</p>
-								<p>This would cost me a nice meal and drink with my partner. It's not going to ruin my life but it will be somewhat frustrating.</p>
-								<p>1 of 3</p>
+                <h6>-$0 of -$30 <span class="smol">per missed deadline</span></h6>
+                <div class="progress">
+                  <div class="progressFilled"></div>
+                </div>
+								<p>This would cost me a nice meal and drink with my partner. It's not going to ruin my life but it will be somewhat frustrating.</p><br>
+                <p class="smol">1 of 3</p>
 							</div>
 							<div class="page2 hidden">
 								<p>-$0 of -$200 per month</p>
@@ -77,10 +89,11 @@
 							<div class="boxSection">
 								<h5>TIERS</h5>
 							</div>
-							<p>Anti-patron</p>
-							<p>-$5 per missed deadline</p>
-							<p>You will receive $5 NZD every time I fail to deliver a monthly game. Thank you for supporting this project!</p>
-							<a href="#">Join $5 Tier</a>
+							<h6>Anti-patron</h6>
+              <p class="smol">$5 per missed deadline</p>
+              <br>
+							<p>You will receive $5 NZD every time I fail to deliver a monthly game. Thank you for helping to motivate me!</p>
+							<a class="smallButton wide" href="#">Join $5 Tier</a>
 						</div>
 					</div>
 				</div>
