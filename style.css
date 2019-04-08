@@ -129,19 +129,27 @@ main {
 .contentGrid {
 	display: grid;
 	grid-template-columns: 25% 50% 25%;
-	grid-template-areas: "left main right";
+	grid-template-areas: "summary main tiers" "goals main tiers";
+	grid-template-rows: max-content max-content max-content;
 	margin-top: 8px; /* maybe hack */
 }
 
-.leftBar {
-	grid-area: left;
+.summary {
+	grid-area: summary;
 	/* flex used here purely to prevent margin collapse */
 	display: flex;
   flex-direction: column;
 }
 
-.rightBar {
-	grid-area: right;
+.goals {
+	grid-area: goals;
+	/* flex used here purely to prevent margin collapse */
+	display: flex;
+  flex-direction: column;
+}
+
+.tiers {
+	grid-area: tiers;
 	/* flex used here purely to prevent margin collapse */
 	display: flex;
   flex-direction: column;
@@ -356,4 +364,20 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+/* narrow styles */
+
+@media (max-width: 1050px) {
+	.contentGrid {
+		grid-template-columns: 33.333% 66.666%;
+		grid-template-areas: "summary main" "tiers main" "goals main";
+	}	
+}
+
+@media (max-width: 790px) {
+	.contentGrid {
+		grid-template-columns: 100%;
+		grid-template-areas: "summary" "main" "tiers" "goals";
+	}	
 }
