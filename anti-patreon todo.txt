@@ -2,7 +2,7 @@ to do:
 
 [x] facebook and twitter share buttons
 [x] progress bar
-[ ] page between the goals
+[x] page between the goals
 
 [ ] mobile friendly mode
 
@@ -12,3 +12,7 @@ to do:
 
 [ ] dynamic patreon count? including goal progress?
 
+minor:
+twitter button icon should be borderless, it shows up when the button is hovered and changes color
+
+do another pass on what the social (fb and twitter) links actually do - check the og: tags so what is shared makes sense.

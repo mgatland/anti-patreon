@@ -13,6 +13,7 @@ body {
 /* non-scrolling header */
 
 header {
+	box-sizing: border-box;
 	width: 100%;
 	position: fixed;
 	z-index: 100;
@@ -33,6 +34,11 @@ header {
 	height: 32px;
 	line-height: 32px;
 	user-select: none;
+}
+
+.wordmark:hover {
+	color: #666;
+	border-color: #666;
 }
 
 .navigationOffset {
@@ -124,7 +130,7 @@ main {
 	display: grid;
 	grid-template-columns: 25% 50% 25%;
 	grid-template-areas: "left main right";
-	margin-top: 8px; /* maybe a hack */
+	margin-top: 8px; /* maybe hack */
 }
 
 .leftBar {
@@ -179,7 +185,7 @@ main {
 	font-weight: normal; /* override if in bold heading */
 }
 
-/* box headings, always in a boxSection */
+/* box headings, always in boxSection */
 h5 {
 	margin: 0;
 	font-weight: 700;
@@ -215,9 +221,18 @@ p {
 	text-align: center;
 }
 
+a.smallButton:hover {
+	text-decoration: inherit;
+}
+
 .smallButton img {
 	height: 12px;
 	margin-right: 10px;
+}
+
+.smallButton:focus {
+	outline: none;
+	box-shadow: var(--focusBorderColor) 0 0 8px;
 }
 
 .wide {
@@ -251,6 +266,10 @@ p {
 	background-color: #1da1f2;
 }
 
+.twitterButton:hover {
+	background-color: rgb(72, 166, 237);
+}
+
 .smallButton.twitterButton img {
 	height: 21px;
 	vertical-align: sub;
@@ -260,6 +279,10 @@ p {
 
 .facebookButton {
 	background-color: #4167b1;
+}
+
+.facebookButton:hover {
+	background-color: #486bb1;
 }
 
 .across {
@@ -322,4 +345,15 @@ p {
 .pager .disabled {
 	color: lightgrey;
 	cursor: default;
+}
+
+/* resets */
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+a:hover {
+	text-decoration: underline;
 }
