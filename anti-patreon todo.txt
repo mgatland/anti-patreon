@@ -1,12 +1,14 @@
 to do:
 
-[...] mobile friendly layouts
+[x] mobile friendly layouts
 [x] fix 'become an anti-patron' button on narrow layouts
+[x] revise breakpoints and make social buttons handle small sizes without line breaking
+
 [ ] polish the main content, add pictures
 [ ] the sign-up page and flow
 [ ] dynamic patreon count? including goal progress?
 [ ] og: etc tags for social.
-[ ] revise breakpoints and make social buttons handle small sizes without line breaking
+
 
 [x] facebook and twitter share buttons
 [x] progress bar
@@ -14,5 +16,5 @@ to do:
 
 
 minor:
-twitter button icon should be borderless, it shows up when the button is hovered and changes color
+[x] twitter button icon should be borderless, it shows up when the button is hovered and changes color
 do another pass on what the social (fb and twitter) links actually do - check the og: tags so what is shared makes sense.

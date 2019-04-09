@@ -111,10 +111,19 @@ main {
 	margin: 12px 8px;
 	width: calc(25% - 16px); /* match right column width */
 	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
 }
 
-.mainAction:hover {
+.mainAction:hover:not(:disabled) {
 	background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), var(--mainActionColor);
+}
+
+/* if it's a <button> */
+.mainAction:disabled {
+	cursor: default;
+	background-color: lightgrey;
+	color: grey;
 }
 
 /*content grid*/
@@ -174,6 +183,10 @@ main {
 	padding: 16px;
 }
 
+.singleColumn .box {
+	padding: 24px; /* more spacious */
+}
+
 .boxSection {
 	margin: 0 -16px;
 	border-bottom: 1px solid lightgrey;
@@ -196,6 +209,15 @@ main {
 	font-weight: normal; /* override if in bold heading */
 }
 
+/* only on sign up page */
+h1 {
+	font-size: 22px;
+	margin-top: 33px;
+	margin-bottom: 48px;
+	font-weight: inherit;
+	text-align: center;
+}
+
 /* box headings, always in boxSection */
 h5 {
 	margin: 0;
@@ -214,6 +236,39 @@ p {
 }
 
 /* utilities */
+
+/* same as .smol */
+label {
+	color: grey;
+	font-size: 14px;
+}
+
+input[type=text], input[type=email] {
+	display: block;
+	width: 100%;
+	height: 45px;
+	padding: 0 16px;
+	margin-top: 9px;
+	margin-bottom: 19px;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+
+input[type=checkbox] {
+	margin-top: 9px;
+	margin-bottom: 19px;
+}
+
+input.validate:invalid {
+  border: 1px solid red;
+}
+
+.error {
+	font-size: 14px;
+	color: red;
+	margin-top: -8px;
+	margin-bottom: 16px;
+}
 
 img {
 	max-width: 100%;
@@ -245,11 +300,6 @@ img {
 
 a.smallButton:hover {
 	background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), var(--buttonColor);
-}
-
-.tierButton {
-	--buttonColor: #5b9ba3;
-	margin-top: 16px;
 }
 
 .smallButton img {
@@ -289,6 +339,28 @@ a.smallButton:hover {
 	margin-bottom: 16px;
 }
 
+.across {
+	display: flex;
+}
+
+.singleColumn {
+	max-width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.downwards {
+	display: flex;
+	flex-direction: column;
+}
+
+/* specific button styles */
+
+.tierButton {
+	--buttonColor: #5b9ba3;
+	margin-top: 16px;
+}
+
 .twitterButton {
 	--buttonColor: #1da1f2;
 	background-color: var(--buttonColor);
@@ -301,10 +373,6 @@ a.smallButton:hover {
 
 .facebookButton {
 	--buttonColor: #4167b1;
-}
-
-.across {
-	display: flex;
 }
 
 /* pager (page changer buttons) */
@@ -386,6 +454,12 @@ a {
 }
 
 @media (max-width: 790px) {
+	.singleColumn {
+		max-width: inherit;
+		margin-left: -8px;
+		margin-right: -8px;
+	}
+
 	.contentGrid {
 		grid-template-columns: 100%;
 		grid-template-areas: "summary" "main" "tiers" "goals";

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+  	<header class="hasBottomEdge spreadApart">
+			<a href="../"><div class="wordmark">ANTI-PATREON</div></a>
+  	</header>
+  	<div class="navigationOffset"></div>
+  	<main>
+        <div class="singleColumn">
+          <form>
+            <h1>Sign up to receive your rewards</h1>
+            <div class="box downwards">
+              <label>Your name
+                <input type="text" required>
+                <div class="error hidden">Please enter your name.</div>
+              </label>
+              <label>Email
+                <input id="email" type="email" required>
+                <div class="error hidden">Please enter a valid email.</div>
+              </label>
+              <label>Confirm Email
+                <input type="email" class="js-repeat-email" required>
+                <div class="error hidden">Both emails must match.</div>
+              </label>
+              <label>Steam account*
+                <input type="text" required>
+                <div class="error hidden">Please enter your Steam account name.</div>
+              </label>
+              <label>
+                <input type="checkbox" required>You agree to our Terms of Use
+                <div class="error hidden">You must read and agree to the terms.</div>
+              </label>
+              <button class="mainAction" disabled>Sign up</button>
+            </div>
+          </form>
+        </div>
+    </main>
+    <script src="signup.js"></script>
+  </body>
+</html>
