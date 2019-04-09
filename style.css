@@ -123,7 +123,7 @@ main {
 	background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), var(--mainActionColor);
 }
 
-/* if it's a <button> */
+/* can be disabled if it's <button> */
 .mainAction:disabled, .smallButton:disabled {
 	cursor: default;
 	background-color: lightgrey;
@@ -348,7 +348,7 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* resets if it is a <button> (not needed if it's a <a> */
+	/* resets <button> styles (not needed for <a> */
 	padding: 0;
 	border: none;
 	font-size: 16px;
@@ -492,6 +492,11 @@ a.smallButton:hover {
 a {
 	color: inherit;
 	text-decoration: inherit;
+}
+
+p a {
+	color: #a33021;
+	text-decoration: underline;
 }
 
 /* narrow styles */

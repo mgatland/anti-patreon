@@ -3,9 +3,12 @@ to do:
 [x] mobile friendly layouts
 [x] fix 'become an anti-patron' button on narrow layouts
 [x] revise breakpoints and make social buttons handle small sizes without line breaking
+[x] polish the main content, add pictures
+[x] the sign-up page
 
-[ ] polish the main content, add pictures
-[ ] the sign-up page and flow
+[ ] add terms and conditions
+[ ] when you click 'submit' on sign up page, what do you see?
+[ ] consider recaptcha
 [ ] dynamic patreon count? including goal progress?
 [ ] og: etc tags for social.
 
