@@ -124,7 +124,7 @@ main {
 }
 
 /* if it's a <button> */
-.mainAction:disabled {
+.mainAction:disabled, .smallButton:disabled {
 	cursor: default;
 	background-color: lightgrey;
 	color: grey;
@@ -307,12 +307,20 @@ input.validate:invalid {
 	background-color: snow;
 }
 
+/* intended to go after inputs, which have lots of margin on the bottom*/
 .error {
 	font-size: 14px;
 	color: red;
 	margin-top: -8px;
 	margin-bottom: 16px;
 }
+
+.warning {
+	font-size: 14px;
+	color: red;
+	margin: 16px 0;
+}
+
 
 img {
 	max-width: 100%;
@@ -340,6 +348,12 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	/* resets if it is a <button> (not needed if it's a <a> */
+	padding: 0;
+	border: none;
+	font-size: 16px;
+	width: 100%;
+	cursor: pointer;
 }
 
 a.smallButton:hover {
@@ -354,10 +368,6 @@ a.smallButton:hover {
 .smallButton:focus, .mainAction:focus {
 	outline: none;
 	box-shadow: var(--focusBorderColor) 0 0 8px;
-}
-
-.wide {
-	display: block;
 }
 
 .half {

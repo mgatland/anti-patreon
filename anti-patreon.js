@@ -66,3 +66,14 @@ if (jsSocialShares) {
     });
   });
 }
+
+// payment too low error handling
+
+const paymentTooLowButtonEl = document.querySelector(".js-payment-too-low-button")
+const paymentTooLowErrorEl = document.querySelector(".js-payment-too-low-error")
+
+paymentTooLowButtonEl.addEventListener("click", function (e) {
+  e.preventDefault()
+  paymentTooLowErrorEl.classList.remove("hidden")
+  paymentTooLowButtonEl.disabled = true
+})

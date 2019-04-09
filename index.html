@@ -23,7 +23,7 @@
 						<!-- tabs: overview, posts-->
 						<!---->
 						<div class="canBeFooter whiteFooter"></div>
-						<a class="mainAction mainActionRight canBeFooter" href="#">Become an anti-patron</a>
+						<a class="mainAction mainActionRight canBeFooter" href="sign-up/">Become an anti-patron</a>
 					</div>
         </div>
 		  </div>
@@ -39,6 +39,7 @@
 							<p>So here's the deal: from now on, every month, I <i>will</i> release a game. But if I don't, I'll pay each of my anti-patrons 5 New Zealand dollars.</p><br>
 							<p>If I miss the deadline, I have to pay up.</p><br>
 							<p>Hopefully that's enough pressure to force me back into action. If it's not, you'll find out in your monthy payment email!</p><br>
+							<p>For logistical reasons, payments will be in the form of digital Steam gift cards.</p>
 							<!--<h4>Technical Details</h4>
 							<p>Sending actual money is actually quite difficult. My current plan is to pay you in Steam credit. When you sign up I'll collect your Steam username and add you as a friend. Steam will, <i>in theory</i>, let me send out as many Steam gift cards as I like, as long as they are to people I was already friends with.</p><br>
 							<p>If this doesn't work - for example if Steam bans me for suspicious payment behaviour - we'll figure out something else.</p><br>
@@ -127,14 +128,15 @@
               				<p class="smol">$1 per missed deadline</p>
               				<br>
 							<p>You receive $1 NZD every time I fail to deliver a monthly game.</p>
-							<a class="smallButton tierButton wide" href="#">Join $1 Tier</a>
+							<button class="smallButton tierButton js-payment-too-low-button">Join $1 Tier</button>
+							<div class="warning js-payment-too-low-error hidden">Sorry, I currently cannot make payments of less than $5. Please choose a higher tier.</div>
 							<div class="boxSection">
 							</div>
 							<h6>Anti-patron</h6>
               				<p class="smol">$5 per missed deadline</p>
               				<br>
 							<p>You receive $5 NZD every time I fail to deliver a monthly game. Thank you for helping to motivate me!</p>
-							<a class="smallButton tierButton wide" href="#">Join $5 Tier</a>
+							<a class="smallButton tierButton" href="sign-up/">Join $5 Tier</a>
 						</div>
 					</div>
 				</div>
