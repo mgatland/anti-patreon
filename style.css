@@ -108,11 +108,15 @@ main {
 	line-height: 50px;
 	border-radius: 32px;
 	padding: 0 32px;
-	margin: 12px 8px;
-	width: calc(25% - 16px); /* match right column width */
 	text-align: center;
 	font-size: 16px;
 	cursor: pointer;
+}
+
+/* mess... these styles are for the profile page button but not the sign up page button*/
+.mainActionRight {
+	margin: 12px 8px;
+	width: calc(25% - 16px); /* match right column width */
 }
 
 .mainAction:hover:not(:disabled) {
@@ -252,15 +256,55 @@ input[type=text], input[type=email] {
 	margin-bottom: 19px;
 	font-size: 16px;
 	box-sizing: border-box;
+	background-color: #fbfbfb;
+	border: 1px solid lightgrey;
+	border-radius: 4px;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+	background-color: white;
+	outline: inherit;
+	border-color: darkblue;
 }
 
 input[type=checkbox] {
+	margin: 0;
 	margin-top: 9px;
-	margin-bottom: 19px;
+	margin-bottom: 25px;
+	margin-right: 25px;
+}
+
+input[type=checkbox]::before {
+	content: "";
+	line-height: 22px;
+	font-size:26px;
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	background-color: white;
+	color: white;
+	border: 1px solid grey;
+	border-radius: 4px;
+	margin-top: -6px;
+}
+
+input[type=checkbox]:checked::before {
+	background-color: var(--mainActionColor);
+	content: "\2713";
+}
+
+input[type=checkbox]:focus {
+	outline: none;
+}
+
+input[type=checkbox]:focus::before {
+	border: 1px solid var(--focusBorderColor);
+	box-shadow: var(--focusBorderColor) 0 0 8px;
 }
 
 input.validate:invalid {
-  border: 1px solid red;
+	border: 1px solid red;
+	background-color: snow;
 }
 
 .error {
