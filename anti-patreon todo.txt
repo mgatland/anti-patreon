@@ -1,7 +1,7 @@
 to do:
 
 [...] mobile friendly layouts
-[ ] fix 'become an anti-patron' button on narrow layouts
+[x] fix 'become an anti-patron' button on narrow layouts
 [ ] polish the main content, add pictures
 [ ] the sign-up page and flow
 [ ] dynamic patreon count? including goal progress?
