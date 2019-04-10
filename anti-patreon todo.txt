@@ -6,7 +6,7 @@ to do:
 [x] polish the main content, add pictures
 [x] the sign-up page
 
-[ ] add terms and conditions
+[x] add terms and conditions
 [ ] when you click 'submit' on sign up page, what do you see?
 [ ] consider recaptcha
 [ ] dynamic patreon count? including goal progress?

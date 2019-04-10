@@ -49,3 +49,13 @@ function checkboxUpdate (e) {
 
 checkboxEls.forEach(el => el.addEventListener("input", checkboxUpdate))
 checkboxEls.forEach(el => el.addEventListener("blur", checkboxUpdate))
+
+//terms of use
+
+const termsButtonEl = document.querySelector(".js-terms-button")
+const termsEl = document.querySelector(".js-terms")
+
+termsButtonEl.addEventListener("click", function (e) {
+  e.preventDefault()
+  termsEl.classList.toggle("hidden")
+})

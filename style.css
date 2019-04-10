@@ -213,6 +213,10 @@ main {
 	font-weight: normal; /* override if in bold heading */
 }
 
+.smol a {
+	color: grey;
+}
+
 /* only on sign up page */
 h1 {
 	font-size: 22px;
@@ -220,6 +224,10 @@ h1 {
 	margin-bottom: 48px;
 	font-weight: inherit;
 	text-align: center;
+}
+
+h1 a {
+	text-decoration: underline;
 }
 
 /* box headings, always in boxSection */
@@ -543,4 +551,14 @@ p a {
 		background-color: white;
 		border-top: 1px solid lightgrey;		
 	}
+}
+
+/* sign up page */
+
+h4 {
+	margin: 0;
+}
+
+.big {
+	font-size: 32px;
 }
