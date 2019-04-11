@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+  	<header class="hasBottomEdge spreadApart">
+			<a href="../"><div class="wordmark">ANTI-PATREON</div></a>
+  	</header>
+  	<div class="navigationOffset"></div>
+  	<main>
+        <div class="singleColumn">
+            <h1 class="js-title">Thank you for your support!</h1>
+            <div class="box downwards">
+              <p class="js-body">Your subscription has been confirmed.</p>
+              <br>
+              <a class="mainAction" href="/">Home</a>
+            </div>
+        </div>
+    </main>
+    <script>
+const urlParams = new URLSearchParams(window.location.search);
+document.querySelector(".js-title").innerText = urlParams.get('t')
+document.querySelector(".js-body").innerText = urlParams.get('b')
+    </script>
+  </body>
+</html>
