@@ -11,7 +11,7 @@
   	<div class="navigationOffset"></div>
   	<main>
         <div class="singleColumn">
-          <form>
+          <form action="https://cavesgame.us13.list-manage.com/subscribe/post?u=b1c03a8b9dad5e66ecc611e52&amp;id=ac5b247e9a" method="post">
             <h1>Secure your monthly commitment from <a href="../">Matthew Gatland</a></h1>
             <div class="box downwards">
               <div class="across">
@@ -44,11 +44,11 @@
             </div>
             <div class="box downwards">
               <label>Your name
-                <input type="text" required>
+                <input name="NAME" type="text" required>
                 <div class="error hidden">Please enter your name.</div>
               </label>
               <label>Email
-                <input id="email" type="email" required>
+                <input name="EMAIL" id="email" type="email" required>
                 <div class="error hidden">Please enter a valid email.</div>
               </label>
               <label>Confirm Email
@@ -56,9 +56,13 @@
                 <div class="error hidden">Both emails must match.</div>
               </label>
               <label>Steam account
-                <input type="text" required>
+                <input name="STEAMNAME" type="text" required>
                 <div class="error hidden">Please enter your Steam account name.</div>
               </label>
+              <!-- amount is always 5 -->
+              <input style="display: none;" name="PAYOUT" type="text" required value="5">
+              <!-- spam -->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b1c03a8b9dad5e66ecc611e52_ac5b247e9a" tabindex="-1" value=""></div>
               <label>
                 <input type="checkbox" required>You agree to our Terms of Use
                 <div class="error hidden">You must read and agree to the terms.</div>
