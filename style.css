@@ -386,7 +386,6 @@ a.smallButton:hover {
 }
 
 .progressFilled {
-	width: 70%;
 	background-color: orange;
 	height: 8px;
 	border-radius: 4px;

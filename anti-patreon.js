@@ -1,44 +1,45 @@
 "use strict"
 
 //////// pager for goals
+function createGoalPager (startPage) {
+  const forwardEl = document.querySelector(".pager .forward")
+  const backEl = document.querySelector(".pager .back")
+  const pageEls = document.querySelectorAll(".page")
 
-const forwardEl = document.querySelector(".pager .forward")
-const backEl = document.querySelector(".pager .back")
-const pageEls = document.querySelectorAll(".page")
+  console.log(forwardEl)
 
-console.log(forwardEl)
+  let page = startPage
 
-let page = 1
-
-const showPage = function () {
-  if (page >= pageEls.length) page = pageEls.length
-  if (page < 1) page = 1
-  let counter = 0
-  for (const el of pageEls) {
-    counter++
-    el.classList.toggle("hidden", counter !== page)
+  const showPage = function () {
+    if (page >= pageEls.length) page = pageEls.length
+    if (page < 1) page = 1
+    let counter = 0
+    for (const el of pageEls) {
+      counter++
+      el.classList.toggle("hidden", counter !== page)
+    }
+    backEl.classList.toggle("disabled", page === 1)
+    forwardEl.classList.toggle("disabled", page === pageEls.length)
+    console.log(page)
   }
-  backEl.classList.toggle("disabled", page === 1)
-  forwardEl.classList.toggle("disabled", page === pageEls.length)
-  console.log(page)
-}
 
-const forward = function (e) {
-  if (e) e.preventDefault()
-  page++
+  const forward = function (e) {
+    if (e) e.preventDefault()
+    page++
+    showPage()
+  }
+
+  const back = function (e) {
+    if (e) e.preventDefault()
+    page--
+    showPage()
+  }
+
+  forwardEl.addEventListener("click", forward);
+  backEl.addEventListener("click", back);
+
   showPage()
 }
-
-const back = function (e) {
-  if (e) e.preventDefault()
-  page--
-  showPage()
-}
-
-forwardEl.addEventListener("click", forward);
-backEl.addEventListener("click", back);
-
-showPage()
 
 //////// social share popup windows
 
@@ -77,3 +78,60 @@ paymentTooLowButtonEl.addEventListener("click", function (e) {
   paymentTooLowErrorEl.classList.remove("hidden")
   paymentTooLowButtonEl.disabled = true
 })
+
+//Goals information
+
+function makeGoal(cost, text) {
+  return {cost, text}
+}
+
+const goals = [
+  makeGoal(30, "This would cost me a nice meal and drink with my partner. It's not going to ruin my life but it will be somewhat frustrating."),
+  makeGoal(200, "This is a week's rent! Losing this each month would put me in serious financial peril. Better keep those games coming!"),
+  makeGoal(500, "Wow. There goes my flights, accomodation and tickets to the New Zealand Games Festival. If I miss a deadline at this tier, I'll have to cancel some travel plans and other big-ticket luxuries."),
+  makeGoal(1000, "I can't afford this. Even one failure would be catastrophic. What have I done?"),
+]
+
+function makeGoalEls(currentAmount) {
+  const pagesEl = document.querySelector(".pages")
+  pagesEl.innerHTML = ""
+  let page = 1
+  for(const goal of goals) {
+    const current = Math.min(currentAmount, goal.cost)
+    const percent = current * 100 / goal.cost
+    const el = `
+    <div class="page hidden">
+      <h6>-$${current} of -$${goal.cost} <span class="smol">per missed deadline</span></h6>
+      <div class="progress">
+        <div class="progressFilled" style="width:${percent}%;"></div>
+      </div>
+      <p>${goal.text}</p><br>
+      <p class="smol">${page} of ${goals.length}</p>
+    </div>
+    `
+    pagesEl.innerHTML += el
+    page++
+  }
+  let startPage = goals.findIndex(goal => goal.cost > currentAmount)
+  if (startPage === -1) startPage = goals.length - 1
+  createGoalPager(startPage + 1)
+}
+
+//retrieve live data
+
+function getData() {
+  fetch('https://8n1sxrl4ci.execute-api.ap-southeast-2.amazonaws.com/default/addAntiPatron')
+  .then(response => response.text())
+  .then (text => {
+    const antiPatrons = parseInt(text)
+    const antiMoney = antiPatrons * 5
+    document.querySelector(".js-patron-count").innerText = antiPatrons
+    document.querySelector(".js-money-count").innerText = "-$" + antiMoney
+
+    //goals
+    makeGoalEls(antiMoney)
+  })
+}
+
+//setTimeout(getData, 1000)
+getData()
