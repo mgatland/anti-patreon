@@ -1,5 +1,11 @@
 to do:
 
+[x] fix mailchimp webhook *cry*
+[ ] should i call it 'reverse-patrion'
+[ ] should i call backers 'become a takeron'
+[ ] have the sticky header once you scroll down
+[ ] improve og: etc tags for social.
+
 [x] mobile friendly layouts
 [x] fix 'become an anti-patron' button on narrow layouts
 [x] revise breakpoints and make social buttons handle small sizes without line breaking
@@ -7,15 +13,13 @@ to do:
 [x] the sign-up page
 
 [x] add terms and conditions
-[ ] when you click 'submit' on sign up page, what do you see?
-[ ] dynamic patreon count? including goal progress?
-[ ] og: etc tags for social.
-[ ] consider recaptcha
+[x] when you click 'submit' on sign up page, what do you see?
+[x] dynamic patreon count? including goal progress?
+[x] consider recaptcha \ handled by mailchimp now
 
 titles:
 moochreon
 taketrion
-
 
 [x] facebook and twitter share buttons
 [x] progress bar
@@ -24,4 +28,3 @@ taketrion
 
 minor:
 [x] twitter button icon should be borderless, it shows up when the button is hovered and changes color
-do another pass on what the social (fb and twitter) links actually do - check the og: tags so what is shared makes sense.
