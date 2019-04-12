@@ -52,6 +52,10 @@ main {
 	min-height: 60vh;
 }
 
+.footer {
+	height: 80px;
+}
+
 .banner {
 	background-image: url("hero.png");
 	background-size: cover;
