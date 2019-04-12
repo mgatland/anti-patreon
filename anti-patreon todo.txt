@@ -1,10 +1,22 @@
 to do:
 
-[x] fix mailchimp webhook *cry*
+[ ] try a new banner image with more personality
+[ ] update fb and twitter socials with the new banner image too
+[ ] maybe zoom in the ducks image (for more personality)
+    maybe a single duck sprite
+[ ] share it on facebook first?
+[ ] then twitter?
+[ ] maybe nz game dev slack?
+
+
+[ ] have the sticky header once you scroll down
 [ ] should i call it 'reverse-patrion'
 [ ] should i call backers 'become a takeron'
-[ ] have the sticky header once you scroll down
-[ ] improve og: etc tags for social.
+
+
+
+[x] fix mailchimp webhook *cry*
+[x] improve og: etc tags for social.
 
 [x] mobile friendly layouts
 [x] fix 'become an anti-patron' button on narrow layouts
