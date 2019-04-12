@@ -193,10 +193,6 @@ main {
 	padding: 16px;
 }
 
-.singleColumn .box {
-	padding: 24px; /* more spacious */
-}
-
 .boxSection {
 	margin: 0 -16px;
 	border-bottom: 1px solid lightgrey;
@@ -223,11 +219,13 @@ main {
 	color: grey;
 }
 
-/* only on sign up page */
+/* only on sign up and thanks page */
 h1 {
 	font-size: 22px;
 	margin-top: 33px;
 	margin-bottom: 48px;
+	margin-left: 16px;
+	margin-right: 16px;
 	font-weight: inherit;
 	text-align: center;
 }
@@ -528,8 +526,12 @@ p a {
 @media (max-width: 790px) {
 	.singleColumn {
 		max-width: inherit;
-		margin-left: -8px;
-		margin-right: -8px;
+	}
+
+	.singleColumn .box {
+		/* box touches edges here */
+		margin-left: 0px;
+		margin-right: 0px;
 	}
 
 	.contentGrid {
