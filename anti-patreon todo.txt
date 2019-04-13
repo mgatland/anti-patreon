@@ -6,6 +6,7 @@ to do:
 [ ] Add 'reached!' text on goals that have been reached, and only show the number once
 [ ] stop at 100 anti-patrons
 
+[ ] homepage link shouldn't go anywhere
 [ ] refresh social images
 [ ] checkbox tick is wrong on chrome for android (test on windows browsers too!)
 [ ] checkbox tick - text align center?
