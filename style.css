@@ -18,8 +18,11 @@ header {
 	position: fixed;
 	z-index: 100;
 	top: 0px;
-	padding: 16px;
 	background-color: white;
+}
+
+.padded {
+	padding: 16px;
 }
 
 .hasBottomEdge {
@@ -97,11 +100,17 @@ main {
     margin: 20px;
 }
 
+.smallAvatar {
+	width: 48px;
+	height: 48px;
+	min-width: 48px;
+	margin: 16px;
+}
+
 /*menu bar */
-.menuBar {
+.alignRight {
 	display: flex;
-	flex-flow: column;
-	align-items: flex-end;
+	justify-content: flex-end;
 }
 
 .mainAction {
@@ -134,6 +143,14 @@ main {
 	cursor: default;
 	background-color: lightgrey;
 	color: grey;
+}
+
+/* when the main action button disappears
+keep a little empty space (hack because of negative margins on the parent). */
+.mainActionSpacerMini {
+	line-height: 12px;
+	border-radius: 32px;
+	margin: 12px 0;
 }
 
 /*content grid*/
@@ -232,6 +249,11 @@ h1 {
 
 h1 a {
 	text-decoration: underline;
+}
+
+/* When you scroll down, the sticky title */
+.stickyTitle {
+	font-size: 22px;
 }
 
 /* box headings, always in boxSection */
@@ -406,6 +428,7 @@ a.smallButton:hover {
 
 .across {
 	display: flex;
+	align-items: center;
 }
 
 .singleColumn {
@@ -546,6 +569,10 @@ p a {
     display: block;
     bottom: 0%;
     left: 0;
+	}
+
+	.hideOnNarrow {
+		display: none;
 	}
 
 	.mainAction {

@@ -135,3 +135,30 @@ function getData() {
 
 //setTimeout(getData, 1000)
 getData()
+
+const onlyShowWhenScrolledEl = document.querySelector('.onlyShowWhenScrolled')
+
+// The sticky title header appears when you scroll past the hero image
+function handleIntersect(entries, observer) {
+  const ratio = entries[0].intersectionRatio
+  console.log(ratio)
+  onlyShowWhenScrolledEl.classList.toggle("hidden", ratio > 0.01)
+
+}
+
+const triggerEl = document.querySelector(".banner")
+
+function createObserver() {
+  var observer
+
+  var options = {
+    root: null,
+    rootMargin: "-64px 0px 0px 0px", //matches the height of the always-on sticky header
+    threshold: 0.01,
+  }
+
+  observer = new IntersectionObserver(handleIntersect, options)
+  observer.observe(triggerEl)
+}
+
+createObserver()
