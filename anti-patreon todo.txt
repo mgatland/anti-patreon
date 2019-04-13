@@ -1,5 +1,13 @@
 to do:
 
+make a game called Blame
+
+firefox: button hover effect not working
+grid layout has the space in it, same as edge
+
+[x] firefox: checkbox overlay not visible
+
+[ ] when the extra sticky header appears, i should hide the original mainAction so there are not two of them.
 [ ] try a new banner image with more personality
 [ ] update fb and twitter socials with the new banner image too
 [ ] maybe zoom in the ducks image (for more personality)
@@ -9,7 +17,7 @@ to do:
 [ ] maybe nz game dev slack?
 
 
-[ ] have the sticky header once you scroll down
+[x] have the sticky header once you scroll down
 [ ] should i call it 'reverse-patrion'
 [ ] should i call backers 'become a takeron'
 
