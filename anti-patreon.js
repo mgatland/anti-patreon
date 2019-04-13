@@ -99,9 +99,17 @@ function makeGoalEls(currentAmount) {
   for(const goal of goals) {
     const current = Math.min(currentAmount, goal.cost)
     const percent = current * 100 / goal.cost
+
+    let progressText = ""
+    if (current === goal.cost) {
+      progressText = `-$${current} <span class="primary">(reached!)</span>`
+    } else {
+      progressText = `-$${current} of -$${goal.cost}`
+    }
+
     const el = `
     <div class="page hidden">
-      <h6>-$${current} of -$${goal.cost} <span class="smol">per missed deadline</span></h6>
+      <h6>${progressText} <span class="smol">per missed deadline</span></h6>
       <div class="progress">
         <div class="progressFilled" style="width:${percent}%;"></div>
       </div>

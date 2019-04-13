@@ -440,14 +440,18 @@ img {
 }
 
 .progressFilled {
-	background-color: orange;
+	background-color: #a33021;
 	height: 8px;
 	border-radius: 4px;
 }
 
+.primary {
+	color: #a33021;
+}
+
 .progress {
 	width: 100%;
-	background-color: grey;
+	background-color: lightgray;
 	height: 8px;
 	border-radius: 4px;
 	margin-top: 10px;
@@ -473,7 +477,7 @@ img {
 /* specific button styles */
 
 .tierButton {
-	--buttonColor: #5b9ba3;
+	--buttonColor: #898cd2;
 	margin-top: 16px;
 }
 

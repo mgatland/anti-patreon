@@ -1,17 +1,15 @@
 to do:
 
-[x] phone: hero text too big
-[x] phone: the $1 sign up button goes weird once disabled
-
-[ ] Add 'reached!' text on goals that have been reached, and only show the number once
+[x] Add 'reached!' text on goals that have been reached, and only show the number once
 [ ] stop at 100 anti-patrons
 
-[ ] homepage link shouldn't go anywhere
-[ ] refresh social images
-[ ] checkbox tick is wrong on chrome for android (test on windows browsers too!)
+[ ] checkbox tick is wrong font on chrome for android (test on windows browsers too!)
 [ ] checkbox tick - text align center?
 
-make a game called Blame
+[x] phone: hero text too big
+[x] phone: the $1 sign up button goes weird once disabled
+[nah] refresh social images
+[x] links to "home" shouldn't leave Anti-Patreon
 
 [x] <button> hover effect not working
 [x] firefox fix: grid layout has the space in it, same as edge
@@ -19,13 +17,9 @@ make a game called Blame
 
 [ ] when the extra sticky header appears, i should hide the original mainAction so there are not two of them.
 [ ] try a new banner image with more personality
-[ ] update fb and twitter socials with the new banner image too
-[ ] maybe zoom in the ducks image (for more personality)
-    maybe a single duck sprite
 [ ] share it on facebook first?
 [ ] then twitter?
 [ ] maybe nz game dev slack?
-
 
 [x] have the sticky header once you scroll down
 [ ] should i call it 'reverse-patrion'
