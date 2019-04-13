@@ -590,6 +590,16 @@ p a {
 		grid-template-areas: "summary" "main" "tiers" "goals";
 	}
 
+	.avatar {
+		width: 80px;
+		min-width: 80px;
+		height: 80px;
+	}
+
+	.bannerText {
+		font-size: 26px;
+	}
+
 	/* fairly hacky code to move the main action button to a sticky footer*/
 	/* hacky mostly because I want a white rectangle to appear behind it*/
 	.canBeFooter {
