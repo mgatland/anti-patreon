@@ -1,5 +1,15 @@
 to do:
 
+[x] phone: hero text too big
+[x] phone: the $1 sign up button goes weird once disabled
+
+[ ] Add 'reached!' text on goals that have been reached, and only show the number once
+[ ] stop at 100 anti-patrons
+
+[ ] refresh social images
+[ ] checkbox tick is wrong on chrome for android (test on windows browsers too!)
+[ ] checkbox tick - text align center?
+
 make a game called Blame
 
 [x] <button> hover effect not working

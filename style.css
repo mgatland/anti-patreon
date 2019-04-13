@@ -418,7 +418,7 @@ img {
 	cursor: pointer;
 }
 
-.smallButton:hover {
+.smallButton:hover:not(:disabled) {
 	background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), var(--buttonColor);
 }
 
