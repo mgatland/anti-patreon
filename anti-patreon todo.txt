@@ -2,9 +2,8 @@ to do:
 
 make a game called Blame
 
-firefox: button hover effect not working
-grid layout has the space in it, same as edge
-
+[x] <button> hover effect not working
+[x] firefox fix: grid layout has the space in it, same as edge
 [x] firefox: checkbox overlay not visible
 
 [ ] when the extra sticky header appears, i should hide the original mainAction so there are not two of them.
