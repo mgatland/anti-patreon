@@ -169,7 +169,7 @@ keep a little empty space (hack because of negative margins on the parent). */
 	display: grid;
 	grid-template-columns: 25% 50% 25%;
 	grid-template-areas: "summary main tiers" "goals main tiers";
-	grid-template-rows: max-content;
+	grid-template-rows: min-content 1fr;
 	margin-top: 8px; /* maybe hack */
 }
 
