@@ -59,3 +59,22 @@ termsButtonEl.addEventListener("click", function (e) {
   e.preventDefault()
   termsEl.classList.toggle("hidden")
 })
+
+
+//emergency virality protection
+
+function getData() {
+  fetch('https://8n1sxrl4ci.execute-api.ap-southeast-2.amazonaws.com/default/addAntiPatron')
+  .then(response => response.text())
+  .then (text => {
+    const antiPatrons = parseInt(text)
+    if (antiPatrons >= 200) {
+      document.querySelector('.js-real-form').innerHTML = 
+      `
+      <h1 class="primary">Sorry! This has become a bit ridiculous so I'm not taking any more sign ups.</h1>
+      `
+    }
+  })
+}
+
+getData()
