@@ -1,5 +1,10 @@
 "use strict"
 
+// Archive warning button 
+document.querySelector(".close-cross").addEventListener('click', function (e) {
+  e.target.parentElement.style.display = "none"
+})
+
 //////// pager for goals
 function createGoalPager (startPage) {
   const forwardEl = document.querySelector(".pager .forward")
@@ -128,8 +133,9 @@ function makeGoalEls(currentAmount) {
 //retrieve live data
 
 function getData() {
-  fetch('https://8n1sxrl4ci.execute-api.ap-southeast-2.amazonaws.com/default/addAntiPatron')
-  .then(response => response.text())
+  //fetch('https://8n1sxrl4ci.execute-api.ap-southeast-2.amazonaws.com/default/addAntiPatron')
+  //.then(response => response.text())
+  Promise.resolve(123)
   .then (text => {
     const antiPatrons = parseInt(text)
     const antiMoney = antiPatrons * 5

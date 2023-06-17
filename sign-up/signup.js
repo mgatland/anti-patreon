@@ -77,4 +77,10 @@ function getData() {
   })
 }
 
-getData()
+// (disabled for achive) getData()
+
+// for achived version:
+submitEl.addEventListener('click', function (e) {
+  e.preventDefault()
+  window.location.href = '../thanks/?t=Thank you for your support!';
+})

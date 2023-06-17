@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
+/* archive notice */
+.archive-warning {
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	border: 1px solid rgb(131, 131, 131);
+	padding: 15px;
+	background-color: rgb(38, 38, 38);
+	color: white;
+	max-width: 50%; /* Make sure it never covers the top left logo */
+}
+
+.close-cross {
+	position: absolute;
+	padding: 5px 10px;
+	top: -4px; /* adjusted to suit the exact character we're using :/ */
+	right: -2px;
+	font-size:25px;
+}
+
+.close-cross::before {
+	content: '×';
+}
+/* end archive notice */
+
 :root {
 	--mainActionColor: #3a3b58;
 	--focusBorderColor: #63c8e8;
